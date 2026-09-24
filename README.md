@@ -27,4 +27,14 @@ próximo mejor producto a sus dueños.
 > La llave para cruzar personas entre empresas es siempre **`id_cliente_hash`**. Antes de
 > compartir datos, revisa **[`guia_participante.md`](guia_participante.md)**.
 
+## Material de apoyo (decks)
+
+Presentaciones de Databricks para el datathon (Unity Catalog, Delta Sharing, Genie, etc.):
+
+**https://github.com/njimenezr/datathon-presentaciones**
+
+> Repo privado — pide acceso al organizador para entrar.
+
+---
+
 *Datos 100% sintéticos. Contenido educativo para el Datathon Grupo Pichincha.*
