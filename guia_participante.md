@@ -20,7 +20,8 @@
 
 - Tu equipo es de **Deuna**. Usa el **login compartido** que te dio el organizador para el
   workspace (trial) de Deuna.
-- Ahí verás tu tabla en el catálogo:
+- **Carga tus datos:** sube este repo como **Git folder** y corre **`cargar_datos.py`** (crea tu
+  catálogo y tabla desde los Parquet de `datos/`). Tu tabla queda en:
 
 | Empresa | Tu tabla |
 |---|---|
