@@ -24,7 +24,7 @@ de negocio. Para cruzar, la llave con las otras empresas es **`id_cliente_hash`*
 
 ---
 
-## 2. Tus datos — `deuna.clean_room.comercios_deuna` (~100 000 filas · 26 columnas)
+## 2. Tus datos — `deuna.clean_room.comercios_deuna` (~100 000 filas · 36 columnas)
 
 Ecosistema de pagos/adquirencia. Cada fila es un **comercio**; el `id_cliente_hash` corresponde
 al **dueño-persona** (así se cruza con Banco y Seguros).
@@ -57,6 +57,16 @@ al **dueño-persona** (así se cruza con Banco y Seguros).
 | `num_reversos` | int | ≥ 0 | Reversos/contracargos. Bajo; sube con el riesgo. 0 si no hay transacciones. |
 | `usa_credito_deuna` | int | 0/1 | Usa crédito Deuna. Sube con afluencia + antigüedad. |
 | `nps_estimado` | int | −100 … 100 | NPS estimado. Cae con el churn/riesgo. |
+| `dias_activos_mes` | int | 0–30 | Días del mes con al menos una venta. 0 si no hay transacciones. |
+| `monto_promedio_diario` | double | ≥ 0 (USD) | Monto por día activo. 0 si no hay transacciones. |
+| `ticket_maximo` | double | ≥ 0 (USD) | Mayor venta del comercio. Escala con la afluencia. |
+| `pct_tx_qr` | double | [0, 1] | Proporción de transacciones cobradas por QR. |
+| `pct_tx_tarjeta` | double | [0, 1] | Proporción de transacciones con tarjeta (`pct_tx_qr + pct_tx_tarjeta ≤ 1`). |
+| `tasa_aprobacion` | double | [0.5, 1] | % de transacciones aprobadas. Baja con el riesgo del dueño. |
+| `num_dispositivos` | int | ≥ 1 | Dispositivos/puntos de cobro. Crece con el tamaño del comercio. |
+| `antiguedad_meses_app` | int | ≥ 1 | Meses usando la app (≤ `meses_activo`). |
+| `propension_credito` | double | [0, 1] | Propensión a tomar crédito. Sube con la afluencia. |
+| `ingreso_estimado_mensual` | double | ≥ 0 (USD) | Ingreso mensual estimado del negocio. Escala con la afluencia. |
 
 ---
 
